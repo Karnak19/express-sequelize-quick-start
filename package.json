@@ -1,0 +1,42 @@
+{
+  "name": "express-sequelize-quick-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node index.js && echo \"If you are in dev env, use npm run dev instead\"",
+    "dev": "nodemon index.js",
+    "resync": "node sequelize/resync.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karnak19/express-sequelize-quick-start.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karnak19/express-sequelize-quick-start/issues"
+  },
+  "homepage": "https://github.com/Karnak19/express-sequelize-quick-start#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.21.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "husky": "^3.0.9",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && pretty-quick --staged"
+    }
+  }
+}
